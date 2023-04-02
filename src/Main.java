@@ -3,10 +3,10 @@ import java.util.Scanner;
 
 public class Main
 {
-    // The extendArray method takes in a int array and a int value and replicates that array with the int value added on to the end
-    public static int[] extendArray(int arr[], int y)
+    // The extendArray method takes in an int array and an int value and replicates that array with the int value added on to the end
+    public static int[] extendArray(int[] arr, int y)
     {
-        int newArr[] = new int[arr.length + 1];
+        int[] newArr = new int[arr.length + 1];
 
         for (int a = 0; a < arr.length; a++)
         {
@@ -17,9 +17,9 @@ public class Main
         return newArr;
     }
     //The doubleArray method takes an int array and returns a double equivalent array
-    public static double[] doubleArray(int arr[])
+    public static double[] doubleArray(int[] arr)
     {
-        double doubleArr[] = new double[arr.length];
+        double[] doubleArr = new double[arr.length];
 
         for (int a = 0; a < arr.length; a++)
         {
@@ -29,7 +29,7 @@ public class Main
 
     }
     //The checkArraySize method takes an int array and returns true if the sum of its elements is > 100
-    public static Boolean checkArraySize(int arr[])
+    public static Boolean checkArraySize(int[] arr)
     {
         int arraySum = 0;
         for (int l = 0; l < arr.length; l++)
@@ -46,7 +46,7 @@ public class Main
         }
     }
     //The compareAverage method takes 2 double arrays and returns true if the average value of array 1 > array 2
-    public static Boolean compareAverage(double arr1[], double arr2[])
+    public static Boolean compareAverage(double[] arr1, double[] arr2)
     {
         double averageArr1 = 0.0;
         double averageArr2 = 0.0;
@@ -69,7 +69,7 @@ public class Main
         }
     }
     //The arrayAverage takes a double array and returns the average value of its elements
-    public static double arrayAverage(double arr[])
+    public static double arrayAverage(double[] arr)
     {
         double arrTotal = 0.0;
         for (int g = 0; g < arr.length; g++)
@@ -84,8 +84,8 @@ public class Main
     //This was created to simplify Scanner usage and prevent overflow between inputs
     public static String scanString()
     {
-        Scanner recieveString = new Scanner(System.in);
-        String newString = recieveString.next();
+        Scanner receiveString = new Scanner(System.in);
+        String newString = receiveString.next();
         return newString;
     }
 
@@ -93,24 +93,24 @@ public class Main
     //Same reason as scanString
     public static int scanInt()
     {
-        Scanner recieveInt = new Scanner(System.in);
-        int newInt = recieveInt.nextInt();
+        Scanner receiveInt = new Scanner(System.in);
+        int newInt = receiveInt.nextInt();
         return newInt;
     }
     //scanInt method creates a new input instance and returns a double value from user input
     //Same reason as scanString
     public static double scanDouble()
     {
-        Scanner recieveDouble = new Scanner(System.in);
-        Double newDouble = recieveDouble.nextDouble();
+        Scanner receiveDouble = new Scanner(System.in);
+        double newDouble = receiveDouble.nextDouble();
         return newDouble;
     }
     //scanDouble method creates a new input instance and returns a boolean value from user input
     //Same reason as scanBoolean
     public static boolean scanBoolean()
     {
-        Scanner recieveBoolean = new Scanner(System.in);
-        boolean newBoolean = recieveBoolean.nextBoolean();
+        Scanner receiveBoolean = new Scanner(System.in);
+        boolean newBoolean = receiveBoolean.nextBoolean();
         return newBoolean;
     }
     //willBuyDrink takes a boolean and a double value, and will return true if both values meet the requirements
@@ -177,7 +177,7 @@ public class Main
         System.out.println("The averaged value of ages is " + average);
 
         //creates a predetermined String array
-        String names[] = new String[] {"Sam", "Tommy", "Tim", "Sally", "Buck", "Bob"};
+        String[] names = new String[] {"Sam", "Tommy", "Tim", "Sally", "Buck", "Bob"};
 
         //uses a for loop to get the average number of characters in each element of the names array
         int numChar = 0;
@@ -209,7 +209,7 @@ public class Main
         String concatedWord = repeatWord(takenWord, totalReps);
         System.out.println(concatedWord);
 
-        //take a first and last name as inputs, use mergeWord to create a fullname
+        //take a first and last name as inputs, use mergeWord to create a full name
         System.out.print("Enter a first Name: ");
         String firstName = scanString();
         System.out.print("Enter a last Name: ");
